@@ -88,7 +88,6 @@ namespace WinFormsApp1
             this.label1.Size = new System.Drawing.Size(115, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "Исходные массивы";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -98,7 +97,6 @@ namespace WinFormsApp1
             this.label2.Size = new System.Drawing.Size(95, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "Связной список";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -153,7 +151,6 @@ namespace WinFormsApp1
             this.label8.Size = new System.Drawing.Size(203, 15);
             this.label8.TabIndex = 11;
             this.label8.Text = " Сумма элементов массивов A  и  B";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBox5
             // 
@@ -187,7 +184,6 @@ namespace WinFormsApp1
             this.label9.Size = new System.Drawing.Size(117, 15);
             this.label9.TabIndex = 16;
             this.label9.Text = "Связной список №2";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // textBox8
             // 
@@ -196,7 +192,6 @@ namespace WinFormsApp1
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(297, 23);
             this.textBox8.TabIndex = 15;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // Form1
             // 
