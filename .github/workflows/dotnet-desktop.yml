@@ -60,6 +60,7 @@ jobs:
       Test_Project_Path:  WinFormsApp1/WinFormsApp1/WinFormsApp1.csproj                  # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
       Wap_Project_Directory: WinFormsApp1    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
       Wap_Project_Path: WinFormsApp1\WinFormsApp1                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     steps:
     - name: Checkout
@@ -86,6 +87,7 @@ jobs:
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
@@ -102,6 +104,7 @@ jobs:
         Appx_Bundle_Platforms: x86|x64
         Appx_Package_Build_Mode: StoreUpload
         Configuration: ${{ matrix.configuration }}
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     # Remove the pfx
     - name: Remove the pfx
